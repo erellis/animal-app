@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class AnimalArray {
 
-        public static void mRrandomAnimal(int[] args) {
+        public void mRrandomAnimal(int[] args) {
 
             /**
              * creating Animal class objects

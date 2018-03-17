@@ -2,7 +2,6 @@ package com.ourideas.android.animalroundup;
 
 import android.support.v7.app.AppCompatActivity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -57,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
             arrayAnimals.add(hyena);
 
         }
-
-
     }
+
+
 
     class Animal {
         int animalImage;
@@ -90,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 do {
-                    currentImage = r.nextInt(images.length);
+                    currentImage = r.nextInt(images.size);
 
 
                 } while (currentImage == lastImage);

@@ -11,6 +11,7 @@ import android.widget.ImageView;
 
 import com.ourideas.android.animalroundup.R;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     Random r;
 
-    Integer[] images = {
+    /** Integer[] images = {
 
-            R.drawable.donkey,
-            R.drawable.hyena,
+           R.drawable.donkey,
+           R.drawable.hyena,
             R.drawable.lion,
 
     };
@@ -35,7 +36,40 @@ public class MainActivity extends AppCompatActivity {
             R.raw.monkey,
             R.raw.hyena,
             R.raw.lion
-    };
+    }; */
+
+    public class AnimalArray {
+
+        public static void mRrandomAnimal(int[] args) {
+
+            /**
+             * creating Animal class objects
+             */
+
+            Animal lion = new Animal(R.drawable.lion, R.raw.lion);
+            Animal hyena = new Animal(R.drawable.hyena, R.raw.hyena);
+            Animal donkey = new Animal(R.drawable.donkey, R.raw.monkey);
+
+
+            ArrayList<Animal> arrayAnimals = new ArrayList<Animal>();
+            arrayAnimals.add(lion);
+            arrayAnimals.add(donkey);
+            arrayAnimals.add(hyena);
+
+        }
+
+
+    }
+
+    class Animal {
+        int animalImage;
+        int animalSound;
+        Animal(int animalImage, int animalSound) {
+            this.animalImage = animalImage;
+            this.animalSound = animalSound;
+        }
+
+    }
 
     int currentImage = 0, lastImage = 0;
 
